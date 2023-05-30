@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const toDosController = require("./controllers/toDoController.js");
 
 const app = express();
 
@@ -7,7 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-const toDosController = require("./controllers/toDoController.js");
 app.use("/toDos", toDosController);
 
 app.get("/", (request, response) => {

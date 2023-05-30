@@ -44,7 +44,7 @@ toDos.put("/:id", async (req, res) => {
     res.status(200).json(updatedToDo);
 });
 
-toDos.post("/",checkBoolean,checkName, async (req,res) => {
+toDos.post("/", checkBoolean,checkName, async (req,res) => {
     try {
         const toDo = await createToDo(req.body);
         res.json(toDo);
